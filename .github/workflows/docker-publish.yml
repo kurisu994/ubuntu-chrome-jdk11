@@ -38,6 +38,10 @@ jobs:
         uses: docker/metadata-action@v4.3.0
         with:
           images: kurisu003/ubuntu-chrome-jdk11
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
       
       # https://github.com/docker/build-push-action
       - name: Build and push Docker image
