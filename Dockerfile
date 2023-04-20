@@ -17,7 +17,7 @@ RUN dpkg -i google-chrome*.deb
 RUN apt-get -f install
 RUN rm -f google-chrome*.deb
 # Install chromedriver
-RUN wget https://oss.npmmirror.com/dist/chromedriver/112.0.5615.49/chromedriver_linux64.zip
+RUN wget https://chromedriver.storage.googleapis.com/112.0.5615.49/chromedriver_linux64.zip
 RUN unzip chromedriver_linux64.zip
 RUN chmod +x chromedriver
 RUN mkdir -p /driver
