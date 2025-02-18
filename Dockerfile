@@ -18,8 +18,7 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.d
     dpkg -i google-chrome*.deb || apt-get -f install -y && \
     rm -f google-chrome*.deb
 # Install chromedriver
-RUN wget https://mirrors.huaweicloud.com/chromedriver/133.0.6943.98/chromedriver-linux64.zip && \
-    unzip chromedriver-linux64.zip && \
-    mv chromedriver-linux64/chromedriver /driver/chromedriver && \
+RUN wget https://chromedriver.storage.googleapis.com/113.0.5672.63/chromedriver_linux64.zip && \
+    unzip chromedriver_linux64.zip && \
     chmod +x /driver/chromedriver && \
-    rm -rf chromedriver-linux64.zip chromedriver-linux64
+    rm -rf chromedriver_*
